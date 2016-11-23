@@ -1,0 +1,92 @@
+﻿<div id="fh5co-menus" data-section="menu">
+            <div class="container">
+                <div class="row text-center fh5co-heading row-padded">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="heading">Shopping Cart</h2>
+                        <p class="sub-heading">Thanks for shopping at the Angular Store.<br />
+    This is your shopping cart. Here you can edit the items, 
+    go back to the store, clear the cart, or check out.</p>
+                    </div>
+                </div>
+
+                <div class="row row-padded">
+                    <div class="col-md-12">
+                      <!--left column starts here-->
+                      <div class="col-md-9">
+                        <div class="fh5co-food-menu">
+                              <!-- product info -->
+                                <table class="table table-bordered">
+
+                                    <tr class="well">
+                                        <td class="tdRight" colspan="3" >
+                                            <a href="#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                                                <i class="icon-shopping-cart" />
+                                                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                                                <span ng-show="cart.getTotalCount(product.sku) > 0"><br />this item is in the cart</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="tdRight"><b>Calories</b></td>
+                                        <td class="tdCenter"><h2>{{product.cal}}</h2></td>
+                                        <td />
+                                    </tr>
+                                    <tr ng-repeat="(nutrientName, nutrientValue) in product.nutrients">
+                                        <td class="tdRight"><b>{{nutrientName}}</b></td>
+                                        <td class="tdCenter"><img ng-src="img/r{{nutrientValue}}.png" alt="{{nutrientValue}}" /></td>
+                                        <td>
+                                            <b>{{store.dvaCaption[nutrientValue]}}</b>:
+                                            {{store.dvaRange[nutrientValue]}}
+                                            of the recommended daily value.
+                                        </td>
+                                    </tr>
+
+                                    <tr class="well">
+                                        <td class="tdRight" colspan="3" >
+                                            <a href="default.htm#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                                                <i class="icon-shopping-cart" />
+                                                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                                                <span ng-show="cart.getTotalCount(product.sku) > 0"><br />this item is in the cart</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                </table>         
+                        </div>    
+                      </div>
+                      <!--left column ends here-->
+
+                      <!--right column starts here-->
+                      <div class="col-md-3">
+                        <div class="fh5co-food-menu">
+                          <div class="">
+                            <button 
+                                class="btn btn-block btn-success" 
+                                ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                                add to cart
+                            </button>
+                            <button 
+                                class="btn btn-block btn-danger" 
+                                ng-click="cart.addItem(product.sku, product.name, product.price, -10000)"
+                                ng-disabled="cart.getTotalCount(product.sku) < 1">
+                                remove from cart
+                            </button>
+                            <button 
+                                class="btn btn-block" 
+                                onclick="window.location.href='#/menu'">
+                                back to store
+                            </button>
+                          </div>        
+                        </div>  
+                      </div>
+                      <!--right column ends here-->
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
