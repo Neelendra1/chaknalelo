@@ -173,7 +173,7 @@ p {
 
 .form-control {
   box-shadow: none;
-  background: transparent;
+  background: #fff;
   border: 2px solid rgba(0, 0, 0, 0.1);
   height: 54px;
   font-size: 18px;
@@ -761,6 +761,8 @@ p {
 
 #fh5co-menus {
   /* padding: 7em 0; */
+  padding: 7em 0;
+  background: #130d08 url(../images/wood_1.png) repeat;
 }
 
 .peanuts{
@@ -777,6 +779,7 @@ p {
 #fh5co-menus .fh5co-heading .heading {
   position: relative;
   padding-top: 30px !important;
+  color:#fff;
 }
 #fh5co-menus .fh5co-heading .heading:before, #fh5co-menus .fh5co-heading .heading::before {
   height: 64px;
@@ -796,6 +799,7 @@ p {
   float: left;
   width: 100%;
   margin-bottom: 30px;
+  background: #fff;
 }
 @media screen and (max-width: 768px) {
   #fh5co-menus .fh5co-food-menu {
@@ -988,7 +992,8 @@ p {
 }
 
 #fh5co-contact {
-  padding: 2em 0;
+  padding: 7em 0;
+  background: #130d08 url(../images/wood_1.png) repeat;
 }
 @media screen and (max-width: 768px) {
   #fh5co-contact {
@@ -1007,6 +1012,7 @@ p {
 #fh5co-contact .fh5co-heading .heading {
   position: relative;
   padding-top: 30px !important;
+  color:#fff;
 }
 #fh5co-contact .fh5co-heading .heading:before, #fh5co-contact .fh5co-heading .heading::before {
   height: 61px;

@@ -27,7 +27,7 @@
 
 	};
 
-	var sliderMain = function() {
+	/*var sliderMain = function() {
 		
 	  	$('#fh5co-home .flexslider').flexslider({
 			animation: "fade",
@@ -39,7 +39,7 @@
 	  		$('#fh5co-home .flexslider .slides > li').css('height', $(window).height());	
 	  	});
 
-	};
+	};*/
 
 	var sliderSayings = function() {
 		$('#fh5co-sayings .flexslider').flexslider({
@@ -568,7 +568,7 @@
 	$(function(){
 
 		fullHeight();
-		sliderMain();
+		/*sliderMain();*/
 		sliderSayings();
 		offcanvasMenu();
 		mainMenuSticky();
